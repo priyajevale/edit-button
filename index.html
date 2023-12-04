@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Address Editor</title>
+</head>
+<body>
+
+    <h1>Email Address Editor</h1>
+
+    <form id="emailForm">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="button" onclick="editEmail()">Edit Email</button>
+    </form>
+
+    <script>
+        function editEmail() {
+            // Get the current email address
+            var currentEmail = document.getElementById("email").value;
+
+            // Prompt the user to enter the new email address
+            var newEmail = prompt("Enter the new email address:", currentEmail);
+
+            // Update the email field with the new email address
+            if (newEmail !== null) {
+                document.getElementById("email").value = newEmail;
+                alert("Email address updated successfully!");
+            }
+        }
+    </script>
+
+</body>
+</html>
